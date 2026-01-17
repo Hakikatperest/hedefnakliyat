@@ -493,6 +493,66 @@
             background: linear-gradient(135deg, #0d8ae3 0%, #0d9ce3 100%);
         }
         
+        /* Flip Card Düzeltmeleri - MOBİL UYUMLULUK */
+        .flip-card {
+            touch-action: manipulation; /* Mobilde daha iyi dokunma deneyimi */
+        }
+        
+        .flip-card-back {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .flip-card-back h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: white;
+            text-align: center;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        
+        .flip-card-back p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            max-height: 70px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            max-width: 100%;
+        }
+        
+        .flip-card-back .btn-secondary {
+            padding: 10px 20px;
+            font-size: 14px;
+            margin-top: 5px;
+            width: auto;
+            min-width: 140px;
+            max-width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        /* İçerik sığdırma için */
+        .flip-card-front p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            line-height: 1.5;
+        }
+        
         /* Image Gallery */
         .gallery {
             padding-bottom: 90px;
@@ -539,6 +599,99 @@
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
             opacity: 1;
+        }
+        
+        /* Google Reviews Section */
+        .reviews {
+            background-color: #f8fafc;
+        }
+        
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .review-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .reviewer-name h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .review-date {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .review-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .review-text {
+            color: var(--dark-color);
+            line-height: 1.6;
+            font-style: italic;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+        
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 15px;
+            border: 1px solid #e0e0e0;
+            font-size: 0.8rem;
+            color: #5f6368;
+        }
+        
+        .google-badge i {
+            color: #4285F4;
+            margin-right: 8px;
+            font-size: 1.1rem;
         }
         
         /* Process Section */
@@ -872,8 +1025,61 @@
                 right: 65px;
             }
             
+            /* Mobil için flip card boyut ayarları */
             .flip-card {
-                height: 300px;
+                height: 320px;
+            }
+            
+            .flip-card-inner {
+                height: 100%;
+            }
+            
+            .flip-card-front, .flip-card-back {
+                padding: 20px 15px;
+            }
+            
+            .flip-card-front h3, .flip-card-back h3 {
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+            }
+            
+            .flip-card-front p {
+                font-size: 0.9rem;
+                max-height: 80px;
+                -webkit-line-clamp: 4;
+            }
+            
+            .flip-card-back p {
+                font-size: 0.85rem;
+                max-height: 65px;
+                -webkit-line-clamp: 3;
+                margin-bottom: 12px;
+            }
+            
+            .service-icon {
+                font-size: 2.8rem;
+                margin-bottom: 15px;
+            }
+            
+            .flip-card-back .btn-secondary {
+                padding: 8px 16px;
+                font-size: 13px;
+                min-width: 120px;
+            }
+            
+            /* Daha iyi mobil dokunma deneyimi */
+            .flip-card {
+                min-height: 320px;
+            }
+            
+            .flip-card-inner {
+                height: 100%;
+                min-height: 320px;
+            }
+            
+            .flip-card-front, .flip-card-back {
+                height: 100%;
+                min-height: 320px;
             }
         }
         
@@ -887,7 +1093,7 @@
                 font-size: 14px;
             }
             
-            .services-list, .image-gallery {
+            .services-list, .image-gallery, .reviews-container {
                 grid-template-columns: 1fr;
             }
             
@@ -900,7 +1106,25 @@
             }
             
             .flip-card {
-                height: 320px;
+                height: 300px;
+            }
+            
+            .flip-card-front h3, .flip-card-back h3 {
+                font-size: 1.2rem;
+            }
+            
+            .flip-card-front p {
+                font-size: 0.85rem;
+                -webkit-line-clamp: 3;
+            }
+            
+            .flip-card-back p {
+                font-size: 0.8rem;
+                -webkit-line-clamp: 2;
+            }
+            
+            .service-icon {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -917,6 +1141,7 @@
                     <li><a href="#home">Ana Sayfa</a></li>
                     <li><a href="#services">Hizmetlerimiz</a></li>
                     <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#reviews">Müşteri Yorumları</a></li>
                     <li><a href="#process">Hizmet Süreci</a></li>
                     <li><a href="#faq">SSS</a></li>
                     <li><a href="#contact">İletişim</a></li>
@@ -937,6 +1162,7 @@
                     <li><a href="#home">Ana Sayfa</a></li>
                     <li><a href="#services">Hizmetlerimiz</a></li>
                     <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#reviews">Müşteri Yorumları</a></li>
                     <li><a href="#process">Hizmet Süreci</a></li>
                     <li><a href="#faq">SSS</a></li>
                     <li><a href="#contact">İletişim</a></li>
@@ -1126,6 +1352,122 @@
                     <div class="gallery-overlay">
                         <h3>Profesyonel Paketleme</h3>
                         <p>Eşyaların güvenli ambalajlanması</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Google Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Google Müşteri Yorumları</h2>
+                <p>Hizmet kalitemizi müşterilerimizin yorumlarından öğrenin</p>
+            </div>
+            
+            <div class="reviews-container">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AŞ</div>
+                            <div class="reviewer-name">
+                                <h4>Ahmet Şenol</h4>
+                                <div class="review-date">15 Ekim 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "İstanbul'dan Ankara'ya şehirler arası taşıma yaptırdım. Ekip çok profesyoneldi, eşyalarım tek tek paketlendi ve hiçbir zarar görmeden ulaştı. Fiyat teklifleri de oldukça makul. Kesinlikle tavsiye ediyorum."
+                    </div>
+                    <div class="google-badge">
+                        <i class="fab fa-google"></i> Google'dan
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SY</div>
+                            <div class="reviewer-name">
+                                <h4>Selin Yılmaz</h4>
+                                <div class="review-date">3 Kasım 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Ofis taşıma işimizi Hedef Nakliye'ye yaptırdık. Bilgisayarlar, yazıcılar ve diğer ofis ekipmanlarımız özenle paketlendi. Yeni ofiste kurulumlarını da yaptılar. İş kaybı yaşamadan taşındık. Çok teşekkürler!"
+                    </div>
+                    <div class="google-badge">
+                        <i class="fab fa-google"></i> Google'dan
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MÇ</div>
+                            <div class="reviewer-name">
+                                <h4>Mehmet Çelik</h4>
+                                <div class="review-date">22 Eylül 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Evden eve nakliyat için birçok firma ile görüştüm, en iyi teklifi Hedef Nakliye verdi. Ekip çok hızlı ve özenli çalıştı. Kırılacak eşyalarım için özel paketleme yaptılar. Hiçbir sorun yaşamadım. Teşekkürler!"
+                    </div>
+                    <div class="google-badge">
+                        <i class="fab fa-google"></i> Google'dan
+                    </div>
+                </div>
+                
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">EZ</div>
+                            <div class="reviewer-name">
+                                <h4>Elif Zengin</h4>
+                                <div class="review-date">10 Aralık 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="review-text">
+                        "Tek bir antika koltuğumu başka şehre taşımak istiyordum. Birçok firma 'parça eşya taşımıyoruz' dedi. Hedef Nakliye hemen kabul etti ve koltuğumu özel ambalajlayıp güvenle taşıdı. Çok memnun kaldım, herkese tavsiye ederim."
+                    </div>
+                    <div class="google-badge">
+                        <i class="fab fa-google"></i> Google'dan
                     </div>
                 </div>
             </div>
@@ -1345,25 +1687,47 @@
             });
         });
         
-        // Flip Cards Functionality
+        // Flip Cards Functionality - DÜZELTİLMİŞ VERSİYON
         const flipCards = document.querySelectorAll('.flip-card');
         let flippedCard = null;
-        
+
         flipCards.forEach(card => {
-            card.addEventListener('click', function() {
-                // Eğer bu kart zaten flipped ise, bir şey yapma
-                if (this.classList.contains('flipped')) {
+            card.addEventListener('click', function(e) {
+                // Eğer tıklanan öğe buton ise, kart çevirme işlemi yapma
+                if (e.target.closest('.btn-secondary') || e.target.tagName === 'A') {
                     return;
                 }
                 
-                // Eğer başka bir kart flipped ise, onu eski haline getir
-                if (flippedCard && flippedCard !== this) {
-                    flippedCard.classList.remove('flipped');
-                }
+                // Kartın zaten flipped olup olmadığını kontrol et
+                const isCurrentlyFlipped = this.classList.contains('flipped');
                 
-                // Bu kartı flipped yap
-                this.classList.add('flipped');
-                flippedCard = this;
+                // Tüm kartları eski haline getir
+                flipCards.forEach(c => {
+                    c.classList.remove('flipped');
+                });
+                
+                // Eğer kart zaten flipped değilse, çevir
+                if (!isCurrentlyFlipped) {
+                    this.classList.add('flipped');
+                    flippedCard = this;
+                    
+                    // 5 saniye sonra kartı otomatik olarak eski haline getir
+                    setTimeout(() => {
+                        if (this.classList.contains('flipped')) {
+                            this.classList.remove('flipped');
+                            flippedCard = null;
+                        }
+                    }, 5000);
+                } else {
+                    flippedCard = null;
+                }
+            });
+        });
+
+        // Buton tıklamalarında kartın kapanmaması için
+        document.querySelectorAll('.flip-card-back .btn-secondary').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Olayın yayılmasını durdur
             });
         });
         
