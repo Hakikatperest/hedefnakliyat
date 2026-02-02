@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garanti Nakliye | Profesyonel Nakliyat Hizmetleri</title>
-    <meta name="description" content="Garanti Nakliye ile güvenli ve profesyonel nakliyat hizmetleri. Evden eve, ofis taşıma, şehirler arası nakliyat ve parça eşya taşıma hizmetlerimizle yanınızdayız.">
-    <meta name="keywords" content="garanti, evden eve nakliyat, ofis taşıma, şehirler arası nakliyat, parça eşya taşıma, asansörlü taşıma">
-    <meta name="author" content="Garanti Nakliye">
+    <title>En Yakın Akücü | 7/24 Oto Elektrik & Akü Servisi</title>
+    <meta name="description" content="En yakın akücü arıyorsanız doğru adrestesiniz! 7/24 acil yol yardım, Varta, Mutlu, İnci akü değişimi, marş tamiri, oto elektrik arızaları. Hemen ara: 0505 421 27 07">
+    <meta name="keywords" content="en yakın akücü, acil akü servisi, varta akü, mutlu akü, inci akü, akü değişimi, marş tamiri, yol yardım, oto elektrikçi">
+    <meta name="author" content="En Yakın Akücü">
     
     <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Garanti Nakliye | Profesyonel Nakliyat Hizmetleri">
-    <meta property="og:description" content="Garanti Nakliye ile güvenli ve profesyonel nakliyat hizmetleri. Tüm nakliye ihtiyaçlarınız için çözüm ortağınız.">
+    <meta property="og:title" content="En Yakın Akücü | 7/24 Oto Elektrik & Akü Servisi">
+    <meta property="og:description" content="En yakın akücü olarak 7/24 acil yol yardım hizmeti sunuyoruz. Varta, Mutlu, İnci akü değişimi, marş tamiri ve tüm oto elektrik arızalarında yanınızdayız.">
     <meta property="og:type" content="website">
     
     <!-- Font Awesome for Icons -->
@@ -28,9 +28,9 @@
         }
         
         :root {
-            --primary-color: #1a237e; /* Daha modern koyu mavi */
-            --secondary-color: #ff6b35; /* Canlı turuncu */
-            --accent-color: #2196f3; /* Mavi renk (giriş butonu için) */
+            --primary-color: #1a237e; /* Koyu mavi */
+            --secondary-color: #ff6b35; /* Turuncu */
+            --accent-color: #2196f3; /* Mavi renk (butonlar için) */
             --light-color: #f8f9fa;
             --dark-color: #0d1b2a;
             --gray-color: #6c757d;
@@ -97,9 +97,9 @@
             background: linear-gradient(135deg, #0d8ae3 0%, #0d9ce3 100%);
         }
         
-        /* Turuncu buton (ikincil butonlar için) */
+        /* Mavi buton (ikincil butonlar için) */
         .btn-secondary {
-            background: var(--gradient-blue); /* Mavi yapıldı */
+            background: var(--gradient-blue);
         }
         
         .btn-secondary:hover {
@@ -316,7 +316,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(42, 157, 143, 0.85)), url('images/hedef-banner.webp');
+            background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(42, 157, 143, 0.85)), url('https://www.acilotoelektrikci.com/images/aku.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -553,37 +553,39 @@
             line-height: 1.5;
         }
         
-        /* Image Gallery */
-        .gallery {
+        /* Akü Markaları Section */
+        .battery-brands {
             padding-bottom: 90px;
         }
         
-        .image-gallery {
+        .brands-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
         }
         
-        .gallery-item {
+        .brand-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
             height: 280px;
+            background: white;
         }
         
-        .gallery-item img {
+        .brand-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             transition: var(--transition);
+            padding: 40px;
         }
         
-        .gallery-item:hover img {
+        .brand-item:hover img {
             transform: scale(1.1);
         }
         
-        .gallery-overlay {
+        .brand-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -596,7 +598,7 @@
             transition: var(--transition);
         }
         
-        .gallery-item:hover .gallery-overlay {
+        .brand-item:hover .brand-overlay {
             transform: translateY(0);
             opacity: 1;
         }
@@ -1081,6 +1083,19 @@
                 height: 100%;
                 min-height: 320px;
             }
+            
+            /* Akü markaları responsive */
+            .brands-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .brand-item {
+                height: 250px;
+            }
+            
+            .brand-item img {
+                padding: 30px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1093,7 +1108,7 @@
                 font-size: 14px;
             }
             
-            .services-list, .image-gallery, .reviews-container {
+            .services-list, .brands-container, .reviews-container {
                 grid-template-columns: 1fr;
             }
             
@@ -1126,6 +1141,14 @@
             .service-icon {
                 font-size: 2.5rem;
             }
+            
+            .brand-item {
+                height: 220px;
+            }
+            
+            .brand-item img {
+                padding: 25px;
+            }
         }
     </style>
 </head>
@@ -1133,14 +1156,14 @@
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
-            <a href="#home" class="logo">Garanti <span>Nakliye</span></a>
+            <a href="#home" class="logo">En Yakın <span>Akücü</span></a>
             
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="#home">Ana Sayfa</a></li>
                     <li><a href="#services">Hizmetlerimiz</a></li>
-                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#brands">Akü Markaları</a></li>
                     <li><a href="#reviews">Müşteri Yorumları</a></li>
                     <li><a href="#process">Hizmet Süreci</a></li>
                     <li><a href="#faq">SSS</a></li>
@@ -1161,7 +1184,7 @@
                 <ul>
                     <li><a href="#home">Ana Sayfa</a></li>
                     <li><a href="#services">Hizmetlerimiz</a></li>
-                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#brands">Akü Markaları</a></li>
                     <li><a href="#reviews">Müşteri Yorumları</a></li>
                     <li><a href="#process">Hizmet Süreci</a></li>
                     <li><a href="#faq">SSS</a></li>
@@ -1174,10 +1197,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Profesyonel Nakliyat Çözümleri</h1>
-            <p>Garanti Nakliye olarak, evden eve, ofis taşıma, şehirler arası nakliyat ve parça eşya taşıma hizmetlerimizle yanınızdayız. Güvenli, hızlı ve ekonomik çözümlerimizle eşyalarınızı güvenle taşıyoruz.</p>
-            <a href="tel:05466896200" class="btn btn-primary btn-wave-effect">
-                <i class="fas fa-phone-alt"></i> Hemen Ara: 0546 689 62 00
+            <h1>7/24 Acil Akü & Oto Elektrik Servisi</h1>
+            <p>En yakın akücü olarak yolda kaldığınızda hemen yanınızdayız! Varta, Mutlu, İnci akü değişimi, marş tamiri ve tüm oto elektrik arızalarınız için 7 gün 24 saat acil yol yardım hizmeti sunuyoruz.</p>
+            <a href="tel:05054212707" class="btn btn-primary btn-wave-effect">
+                <i class="fas fa-phone-alt"></i> Hemen Ara: 0505 421 27 07
             </a>
         </div>
     </section>
@@ -1187,126 +1210,126 @@
         <div class="container">
             <div class="section-title">
                 <h2>Hizmetlerimiz</h2>
-                <p>Profesyonel nakliyat çözümlerimizle her türlü taşıma ihtiyacınız için yanınızdayız.</p>
+                <p>Profesyonel oto elektrik ve akü servislerimizle her türlü araç probleminiz için yanınızdayız.</p>
             </div>
             
             <div class="services-list">
-                <!-- Evden Eve Nakliyat Kartı -->
-                <div class="flip-card" id="evden-eve-card">
+                <!-- Akü Değişimi Kartı -->
+                <div class="flip-card" id="aku-degisim-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="flip-indicator">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-home"></i>
+                                <i class="fas fa-car-battery"></i>
                             </div>
-                            <h3>Evden Eve Nakliyat</h3>
-                            <p>Evlerinizdeki eşyalarınızı özenle paketleyip, güvenli bir şekilde yeni adresinize taşıyoruz. Kırılacak eşyalar için özel paketleme sistemimizle hizmetinizdeyiz.</p>
+                            <h3>Akü Değişimi & Şarjı</h3>
+                            <p>Varta, Mutlu, İnci akü değişimi ve şarjı. Bitmiş akünüzü yerinde şarj ediyor veya yeni akü takıyoruz. Tüm araç modelleri için uygun akü stoklarımız mevcuttur.</p>
                         </div>
                         <div class="flip-card-back">
                             <div class="service-icon">
-                                <i class="fas fa-home"></i>
+                                <i class="fas fa-car-battery"></i>
                             </div>
-                            <h3>Evden Eve Nakliyat</h3>
-                            <p>Özel ambalaj malzemeleri ile eşyalarınızı paketliyor, güvenli taşıma için özenle hazırlıyoruz.</p>
-                            <a href="tel:05466896200" class="btn btn-secondary">Hemen Ara</a>
+                            <h3>Akü Değişimi & Şarjı</h3>
+                            <p>Orijinal akülerimizle aracınıza uygun aküyü belirliyor, profesyonel montaj hizmeti sunuyoruz. Eski akünüzü geri alıyoruz.</p>
+                            <a href="tel:05054212707" class="btn btn-secondary">Hemen Ara</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Şehirler Arası Nakliyat Kartı -->
-                <div class="flip-card" id="sehirler-arasi-card">
+                <!-- Marş Tamiri Kartı -->
+                <div class="flip-card" id="mars-tamir-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="flip-indicator">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-truck-moving"></i>
+                                <i class="fas fa-cogs"></i>
                             </div>
-                            <h3>Şehirler Arası Nakliyat</h3>
-                            <p>Şehirler arası nakliyat ihtiyaçlarınız için modern araç filomuz ve deneyimli ekibimizle hızlı ve güvenli taşıma hizmeti sağlıyoruz.</p>
+                            <h3>Marş Sistemi Tamiri</h3>
+                            <p>Marş motoru arızaları, marş problemi, marş dinamosu tamiri. Aracınız çalışmıyorsa, marş problemi yaşıyorsanız hemen bizi arayın. Uzman ekibimiz sorununuzu çözsün.</p>
                         </div>
                         <div class="flip-card-back">
                             <div class="service-icon">
-                                <i class="fas fa-truck-moving"></i>
+                                <i class="fas fa-cogs"></i>
                             </div>
-                            <h3>Şehirler Arası Nakliyat</h3>
-                            <p>Uzun mesafe taşımalarda özel güvenlik önlemleri alıyor, eşyalarınızı sigortalı olarak taşıyoruz.</p>
-                            <a href="tel:05466896200" class="btn btn-secondary">Hemen Ara</a>
+                            <h3>Marş Sistemi Tamiri</h3>
+                            <p>Marş problemlerinizi uzman ekibimizle çözüyoruz. Marş motoru tamiri veya değişimi için hemen yanınızdayız.</p>
+                            <a href="tel:05054212707" class="btn btn-secondary">Hemen Ara</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Ofis Taşıma Kartı -->
-                <div class="flip-card" id="ofis-tasima-card">
+                <!-- Oto Elektrik Tamiri Kartı -->
+                <div class="flip-card" id="elektrik-tamir-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="flip-indicator">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-building"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <h3>Ofis Taşıma</h3>
-                            <p>Ofis taşıma işlemlerinizi minimum iş kaybı ile gerçekleştiriyor, ofis ekipmanlarınızı profesyonelce taşıyor ve yeni ofisinizde kurulumunu yapıyoruz.</p>
+                            <h3>Oto Elektrik Tamiri</h3>
+                            <p>Elektrik sistemi arızaları, sigorta problemleri, kablo tamiri, aydınlatma arızaları. Oto elektrik konusunda tüm arızalarınız için uzman çözümler sunuyoruz.</p>
                         </div>
                         <div class="flip-card-back">
                             <div class="service-icon">
-                                <i class="fas fa-building"></i>
+                                <i class="fas fa-bolt"></i>
                             </div>
-                            <h3>Ofis Taşıma</h3>
-                            <p>Ofis ekipmanlarınızı özenle paketleyip, yeni ofisinizde kurulumunu yaparak iş kaybınızı en aza indiriyoruz.</p>
-                            <a href="tel:05466896200" class="btn btn-secondary">Hemen Ara</a>
+                            <h3>Oto Elektrik Tamiri</h3>
+                            <p>Elektrik arızalarını modern ekipmanlarımızla tespit edip, hızlı ve güvenilir tamir hizmeti sunuyoruz.</p>
+                            <a href="tel:05054212707" class="btn btn-secondary">Hemen Ara</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Parça Eşya Taşıma Kartı -->
-                <div class="flip-card" id="parca-esya-card">
+                <!-- Acil Yol Yardım Kartı -->
+                <div class="flip-card" id="yol-yardim-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="flip-indicator">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-box-open"></i>
+                                <i class="fas fa-road"></i>
                             </div>
-                            <h3>Parça Eşya Taşıma</h3>
-                            <p>Tek bir eşyanızı bile güvenle taşıyoruz. Parça eşya taşıma hizmetimizle büyük nakliyatlara gerek kalmadan eşyalarınızı istediğiniz adrese ulaştırıyoruz.</p>
+                            <h3>Acil Yol Yardım</h3>
+                            <p>Yolda kaldıysanız, aracınız çalışmıyorsa hemen bizi arayın. 7/24 acil yol yardım hizmetimizle en kısa sürede yanınızdayız. En Yakın Akücü olarak hizmet veriyoruz.</p>
                         </div>
                         <div class="flip-card-back">
                             <div class="service-icon">
-                                <i class="fas fa-box-open"></i>
+                                <i class="fas fa-road"></i>
                             </div>
-                            <h3>Parça Eşya Taşıma</h3>
-                            <p>Tek parça eşyalarınızı da özenle paketleyip, hızlı ve güvenli bir şekilde taşıyoruz. Büyük nakliyatlara gerek kalmadan hizmet alın.</p>
-                            <a href="tel:05466896200" class="btn btn-secondary">Hemen Ara</a>
+                            <h3>Acil Yol Yardım</h3>
+                            <p>Gece gündüz demeden 7/24 yol yardım hizmeti. Yolda kaldığınızda hemen arayın, en kısa sürede yanınızdayız.</p>
+                            <a href="tel:05054212707" class="btn btn-secondary">Hemen Ara</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Asansörlü Taşıma Kartı -->
-                <div class="flip-card" id="asansorlu-tasima-card">
+                <!-- Alternatör & Şarj Dinamosu Kartı -->
+                <div class="flip-card" id="alternator-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="flip-indicator">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-elevator"></i>
+                                <i class="fas fa-charging-station"></i>
                             </div>
-                            <h3>Asansörlü Taşıma</h3>
-                            <p>Katlı binalarda eşya taşıma sorununa çözüm olarak asansörlü taşıma hizmeti sunuyor, eşyalarınızı merdivenlerden zarar görmeden taşıyoruz.</p>
+                            <h3>Alternatör & Şarj Dinamosu</h3>
+                            <p>Alternatör arızaları, şarj dinamosu tamiri, akü şarj problemleri. Aracınızın şarj sistemindeki sorunları uzman ekibimizle çözüyoruz.</p>
                         </div>
                         <div class="flip-card-back">
                             <div class="service-icon">
-                                <i class="fas fa-elevator"></i>
+                                <i class="fas fa-charging-station"></i>
                             </div>
-                            <h3>Asansörlü Taşıma</h3>
-                            <p>Özel asansör sistemimiz ile eşyalarınızı katlardan güvenle taşıyor, merdivenlerden taşıma riskini ortadan kaldırıyoruz.</p>
-                            <a href="tel:05466896200" class="btn btn-secondary">Hemen Ara</a>
+                            <h3>Alternatör & Şarj Dinamosu</h3>
+                            <p>Alternatör arızalarını tespit edip, tamir veya değişim hizmeti sunuyoruz. Akünüzün şarj olmama sorununu çözüyoruz.</p>
+                            <a href="tel:05054212707" class="btn btn-secondary">Hemen Ara</a>
                         </div>
                     </div>
                 </div>
@@ -1314,36 +1337,36 @@
         </div>
     </section>
     
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
+    <!-- Akü Markaları Section -->
+    <section class="battery-brands" id="brands">
         <div class="container">
             <div class="section-title">
-                <h2>Bizden Fiyat Almadan Karar Vermeyin</h2>
-                <p>Profesyonel ekip ve ekipmanlarımızla eşyalarınızı güvenli şekilde garanti noktaya ulaştırıyoruz.</p>
+                <h2>Resmi Satıcısı Olduğumuz Akü Markaları</h2>
+                <p>Dünya lideri ve Türkiye'nin en kaliteli akü markalarının resmi satıcısıyız</p>
             </div>
             
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="images/hedef1.webp" alt="Evden eve nakliyat çalışmamız">
-                    <div class="gallery-overlay">
-                        <h3>Evden Eve Nakliyat</h3>
-                        <p>Profesyonel paketleme ve taşıma</p>
+            <div class="brands-container">
+                <div class="brand-item">
+                    <img src="https://www.acilotoelektrikci.com/images/varta.webp" alt="Varta Akü - En Kaliteli Akü Markası">
+                    <div class="brand-overlay">
+                        <h3>Varta Akü</h3>
+                        <p>Dünya lideri Alman kalitesi</p>
                     </div>
                 </div>
                 
-                <div class="gallery-item">
-                    <img src="images/hedef2.webp" alt="Ofis taşıma çalışmamız">
-                    <div class="gallery-overlay">
-                        <h3>Ofis Taşıma</h3>
-                        <p>Ofis ekipmanlarının güvenli taşınması</p>
+                <div class="brand-item">
+                    <img src="https://www.acilotoelektrikci.com/images/mutlu.webp" alt="Mutlu Akü - Türkiye'nin Yerli Akü Markası">
+                    <div class="brand-overlay">
+                        <h3>Mutlu Akü</h3>
+                        <p>Türkiye'nin gururu yerli üretim</p>
                     </div>
                 </div>
                 
-                <div class="gallery-item">
-                    <img src="images/hedef3.webp" alt="Şehirler arası nakliyat çalışmamız">
-                    <div class="gallery-overlay">
-                        <h3>Şehirler Arası Nakliyat</h3>
-                        <p>Modern araçlarla güvenli taşıma</p>
+                <div class="brand-item">
+                    <img src="https://www.acilotoelektrikci.com/images/inci.webp" alt="İnci Akü - Güvenilir ve Ekonomik Akü">
+                    <div class="brand-overlay">
+                        <h3>İnci Akü</h3>
+                        <p>Ekonomik ve güvenilir çözüm</p>
                     </div>
                 </div>
             </div>
@@ -1363,9 +1386,9 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">AŞ</div>
+                            <div class="reviewer-avatar">MŞ</div>
                             <div class="reviewer-name">
-                                <h4>Ahmet Şenol</h4>
+                                <h4>Mehmet Şahin</h4>
                                 <div class="review-date">15 Ekim 2023</div>
                             </div>
                         </div>
@@ -1378,7 +1401,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="review-text">
-                        "İstanbul'dan Ankara'ya şehirler arası taşıma yaptırdım. Ekip çok profesyoneldi, eşyalarım tek tek paketlendi ve hiçbir zarar görmeden ulaştı. Fiyat teklifleri de oldukça makul. Kesinlikle tavsiye ediyorum."
+                        "Gece yarısı yolda kaldım, aracım çalışmıyordu. En yakın akücü arayışında bu siteyi buldum. 15 dakika içinde geldiler, aküyü değiştirdiler. Çok profesyonel ve hızlı hizmet. Kesinlikle tavsiye ediyorum."
                     </div>
                     <div class="google-badge">
                         <i class="fab fa-google"></i> Google'dan
@@ -1389,9 +1412,9 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">SY</div>
+                            <div class="reviewer-avatar">AY</div>
                             <div class="reviewer-name">
-                                <h4>Selin Yılmaz</h4>
+                                <h4>Ahmet Yılmaz</h4>
                                 <div class="review-date">3 Kasım 2023</div>
                             </div>
                         </div>
@@ -1404,7 +1427,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="review-text">
-                        "Ofis taşıma işimizi Garanti Nakliye'ye yaptırdık. Bilgisayarlar, yazıcılar ve diğer ofis ekipmanlarımız özenle paketlendi. Yeni ofiste kurulumlarını da yaptılar. İş kaybı yaşamadan taşındık. Çok teşekkürler!"
+                        "Varta akü değişimi için aradım. En uygun fiyatı verdiler, orijinal aküyü getirdiler ve montajını yaptılar. Eski aküyü de geri aldılar. Çok memnun kaldım, teşekkürler En Yakın Akücü!"
                     </div>
                     <div class="google-badge">
                         <i class="fab fa-google"></i> Google'dan
@@ -1415,9 +1438,9 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">MÇ</div>
+                            <div class="reviewer-avatar">SÇ</div>
                             <div class="reviewer-name">
-                                <h4>Mehmet Çelik</h4>
+                                <h4>Sevim Çelik</h4>
                                 <div class="review-date">22 Eylül 2023</div>
                             </div>
                         </div>
@@ -1430,7 +1453,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="review-text">
-                        "Evden eve nakliyat için birçok firma ile görüştüm, en iyi teklifi Garanti Nakliye verdi. Ekip çok hızlı ve özenli çalıştı. Kırılacak eşyalarım için özel paketleme yaptılar. Hiçbir sorun yaşamadım. Teşekkürler!"
+                        "Kadın olarak tek başıma yolda kalmıştım, çok korkuyordum. En yakın akücüyü aradım, 20 dakikada geldiler. Çok nazik ve profesyonellerdi. Aküyü değiştirdiler, güvenli bir şekilde yola devam ettim. Çok teşekkür ederim!"
                     </div>
                     <div class="google-badge">
                         <i class="fab fa-google"></i> Google'dan
@@ -1441,9 +1464,9 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">EZ</div>
+                            <div class="reviewer-avatar">EÖ</div>
                             <div class="reviewer-name">
-                                <h4>Elif Zengin</h4>
+                                <h4>Emre Öztürk</h4>
                                 <div class="review-date">10 Aralık 2023</div>
                             </div>
                         </div>
@@ -1456,7 +1479,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="review-text">
-                        "Tek bir antika koltuğumu başka şehre taşımak istiyordum. Birçok firma 'parça eşya taşımıyoruz' dedi. Garanti Nakliye hemen kabul etti ve koltuğumu özel ambalajlayıp güvenle taşıdı. Çok memnun kaldım, herkese tavsiye ederim."
+                        "Marş problemi vardı, aracım çalışmıyordu. Birçok tamirciye gittim çözemediler. En yakın akücü ekibi geldi, sorunu hemen tespit etti. Marş motorunu tamir ettiler. Çok uygun fiyata ve kaliteli işçilik. Herkese tavsiye ederim."
                     </div>
                     <div class="google-badge">
                         <i class="fab fa-google"></i> Google'dan
@@ -1471,38 +1494,32 @@
         <div class="container">
             <div class="section-title">
                 <h2>Hizmet Yol Haritamız</h2>
-                <p>Profesyonel nakliyat sürecimiz 5 adımda tamamlanır</p>
+                <p>Profesyonel akü ve oto elektrik servisi sürecimiz 4 adımda tamamlanır</p>
             </div>
             
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>İhtiyaç Analizi ve Keşif</h3>
-                    <p>Ücretsiz keşif hizmetimizle evinize/ofisinize geliyor, taşınacak eşyaları değerlendiriyor ve detaylı ihtiyaç analizi yapıoruz.</p>
+                    <h3>Arayın & Sorununuzu Anlatın</h3>
+                    <p>Bizi arayarak sorununuzu anlatın. Aracınızın marka/model bilgilerini ve yaşadığınız problemi paylaşın.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Planlama ve Teklif</h3>
-                    <p>Size özel taşıma planı oluşturuyor, şeffaf fiyatlandırma ile teklifimizi sunuyoruz. Gizli maliyet yoktur.</p>
+                    <h3>Ücretsiz Keşif & Teşhis</h3>
+                    <p>Ekibimiz en kısa sürede yanınızda olur. Sorunu teşhis edip size şeffaf fiyatlandırma sunarız.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3>Profesyonel Paketleme</h3>
-                    <p>Eşyalarınızı özel ambalaj malzemeleri ile profesyonelce paketliyor, kırılacak eşyaları özel koruma ile hazırlıyoruz.</p>
+                    <h3>Profesyonel Tamir & Değişim</h3>
+                    <p>Onayınızın ardından işleme başlarız. Orijinal yedek parçalar kullanarak tamir veya değişim yaparız.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Güvenli Taşıma</h3>
-                    <p>Modern araçlarımız ve eğitimli ekibimizle eşyalarınızı yeni adresinize güvenle taşıyoruz. Tüm taşıma sigortalıdır.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Yerleştirme ve Kontrol</h3>
-                    <p>Eşyalarınızı yeni mekanda belirlediğiniz yerlere yerleştiriyor, montaj işlemlerini tamamlıyor ve son kontrolleri yapıyoruz.</p>
+                    <h3>Test & Garanti</h3>
+                    <p>İşlem tamamlandıktan sonra aracınızı test ederiz. Tüm hizmetlerimiz garantilidir.</p>
                 </div>
             </div>
         </div>
@@ -1513,57 +1530,57 @@
         <div class="container">
             <div class="section-title">
                 <h2>Sıkça Sorulan Sorular</h2>
-                <p>Nakliyat hizmetlerimizle ilgili en çok sorulan sorular ve cevapları</p>
+                <p>Akü ve oto elektrik servisimizle ilgili en çok sorulan sorular ve cevapları</p>
             </div>
             
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Nakliyat fiyatları nasıl belirleniyor?</h3>
+                        <h3>Akü değişimi ne kadar sürer?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Nakliyat fiyatları; taşınacak eşya miktarı, mesafe, taşımanın zorluk derecesi, ek hizmetler (paketleme, kurulum vb.) gibi faktörlere göre belirlenir. Ücretsiz keşif hizmetimizle detaylı bir değerlendirme yaparak size net ve şeffaf bir fiyat teklifi sunuyoruz.</p>
+                        <p>Akü değişimi ortalama 15-30 dakika sürer. Ekibimiz yanınıza geldiğinde, aracınızın modeline uygun aküyü belirler, eski aküyü söküp yeni aküyü takar ve gerekli bağlantıları yapar. İşlem sonunda aracınızı test ederiz.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Taşıma sırasında eşyalarım sigortalı mı?</h3>
+                        <h3>Akü değişimi için ne kadar önceden aramalıyım?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Evet, tüm taşıma işlemlerimiz sigortalıdır. Eşyalarınız nakliyat sırasında herhangi bir hasar görürse, sigorta kapsamında gerekli tazminat işlemleri başlatılır. Sigorta poliçemizi talep ettiğiniz takdirde inceleyebilirsiniz.</p>
+                        <p>7/24 hizmet verdiğimiz için her an arayabilirsiniz. Acil durumlarda genellikle 30 dakika içinde yanınızdayız. Yoğun saatlerde bu süre 45-60 dakikaya çıkabilir. Mümkünse sabah saatlerinde aramanız daha hızlı hizmet almanızı sağlar.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Nakliyat için ne kadar önceden randevu almalıyım?</h3>
+                        <h3>Hangi marka aküyü önerirsiniz?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Özellikle yoğun sezonlarda (yaz ayları, ay sonları) en az 1-2 hafta öncesinden randevu almanızı öneririz. Ancak acil durumlarda mümkün olan en kısa sürede size hizmet vermeye çalışıyoruz.</p>
+                        <p>Varta, Mutlu ve İnci akülerin resmi satıcısıyız. Aracınızın modeline, kullanım şeklinize ve bütçenize en uygun aküyü öneriyoruz. Varta yüksek performans için, Mutlu ekonomik ve güvenilir çözüm için, İnci ise bütçe dostu seçenek için idealdir.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Paketleme hizmetiniz var mı?</h3>
+                        <h3>Eski aküm ne olacak?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Evet, profesyonel paketleme hizmetimiz mevcuttur. Kırılacak eşyalar için özel ambalaj malzemeleri kullanarak, eşyalarınızın güvenli bir şekilde paketlenmesini sağlıyoruz. Paketleme hizmeti fiyat teklifimize dahil edilebilir veya ayrı olarak talep edilebilir.</p>
+                        <p>Eski akünüzü geri alıyoruz ve çevreye duyarlı şekilde geri dönüşüme gönderiyoruz. Bu sayede hem çevreye katkı sağlıyor hem de size ek bir maliyet çıkarmıyoruz.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Şehirler arası nakliyat ne kadar sürer?</h3>
+                        <h3>Garanti süreniz ne kadar?</h3>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Şehirler arası nakliyat süresi; mesafeye, yol durumuna ve hava koşullarına göre değişiklik gösterebilir. İstanbul-Ankara gibi bir taşıma ortalama 5-6 saat sürerken, daha uzun mesafeler için bu süre artabilir. Size taşıma öncesinde tahmini varış süresi hakkında bilgi veriyoruz.</p>
+                        <p>Akü değişimlerinde akü markasının garanti süresi geçerlidir (genellikle 24-36 ay). Tamir hizmetlerimiz ise 6 ay garanti kapsamındadır. Garanti belgelerini işlem sonunda size teslim ediyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -1575,26 +1592,26 @@
         <div class="container">
             <div class="section-title">
                 <h2>İletişim</h2>
-                <p>Nakliyat ihtiyaçlarınız için bize ulaşın, en kısa sürede size dönüş yapalım.</p>
+                <p>7/24 acil akü ve oto elektrik servisi için bize ulaşın</p>
             </div>
             
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone-alt"></i>
                     <h3>Telefon</h3>
-                    <p>0546 689 62 00</p>
+                    <p>0505 421 27 07</p>
                 </div>
                 
                 <div class="contact-item">
                     <i class="fab fa-whatsapp"></i>
                     <h3>Whatsapp</h3>
-                    <p>0546 689 62 00</p>
+                    <p>0505 421 27 07</p>
                 </div>
                 
                 <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>E-posta</h3>
-                    <p>info@garantinakliye.com</p>
+                    <i class="fas fa-clock"></i>
+                    <h3>Çalışma Saatleri</h3>
+                    <p>7/24 Acil Servis</p>
                 </div>
             </div>
         </div>
@@ -1603,22 +1620,22 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Garanti <span>Nakliye</span></div>
-            <p>Profesyonel nakliyat çözümleriyle yanınızdayız. Eşyalarınızı güvenle taşıyor, memnuniyetinizi garantiliyoruz.</p>
+            <div class="footer-logo">En Yakın <span>Akücü</span></div>
+            <p>7/24 acil akü değişimi ve oto elektrik tamiri hizmetiyle yanınızdayız. Yolda kaldığınızda hemen arayın!</p>
             
             <div class="footer-copyright">
-                &copy; 2023 Garanti Nakliye. Tüm hakları saklıdır.
+                &copy; 2023 En Yakın Akücü. Tüm hakları saklıdır.
             </div>
         </div>
     </footer>
     
     <!-- Floating Action Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/905466896200?text=Merhaba,%20nakliyat%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum.%20Size%20nasıl%20yardımcı%20olabilirsiniz?" class="floating-btn whatsapp" target="_blank" title="WhatsApp ile iletişim">
+        <a href="https://wa.me/905054212707?text=Merhaba,%20en%20yakın%20akücü%20aranıyorum.%20Yardıma%20ihtiyacım%20var." class="floating-btn whatsapp" target="_blank" title="WhatsApp ile iletişim">
             <div class="whatsapp-tooltip">Size nasıl yardımcı olabiliriz?</div>
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:05466896200" class="floating-btn call" title="Telefon ile ara">
+        <a href="tel:05379173673" class="floating-btn call" title="Telefon ile ara">
             <i class="fas fa-phone"></i>
         </a>
     </div>
